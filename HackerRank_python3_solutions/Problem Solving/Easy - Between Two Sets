@@ -1,0 +1,31 @@
+def getTotalX(a, b):
+    '''Find how many numbers are divisible by every number in a
+    and also divide into every number in b.'''
+    
+    potentials = [num for num in range(a[-1], b[-1] + 1)]
+    passed_a = []
+    solutions = []
+
+    for pot_1 in potentials:
+        intermediary_1 = []
+        for num_a in a:
+            if pot_1 % num_a == 0:
+                intermediary_1.append(pot_1)
+            else:
+                break
+        if len(intermediary_1) == n:
+            passed_a.append(pot_1)
+        else:
+            continue
+
+    for pot_2 in passed_a:
+        intermediary_2 = []
+        for num_b in b:
+            if num_b % pot_2 == 0:
+                intermediary_2.append(pot_2)
+            else:
+                break
+        if len(intermediary_2) == m:
+            solutions.append(pot_2)
+    
+    return len(solutions)
