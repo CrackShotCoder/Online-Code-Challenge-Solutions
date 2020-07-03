@@ -1,2 +1,2 @@
 # code-challenges-a
-Single location for my online learning/challenges
+This is a dump for my solutions to various online coding challenges.
