@@ -1,0 +1,20 @@
+def diagonalDifference(arr):
+    '''Calculate the  aboslute difference between the 
+    diagonals of an n x n matrix.'''
+    
+    left_to_right = 0
+    i = 0
+    while i < n:
+        left_to_right += arr[i][i]
+        i += 1
+
+    right_to_left = 0
+    i = 0
+    j = n - 1
+    while i < n:
+        right_to_left += arr[i][j]
+        i += 1
+        j -= 1
+    
+    answer = int(abs(left_to_right - right_to_left))
+    return answer
