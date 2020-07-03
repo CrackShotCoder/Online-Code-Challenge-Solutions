@@ -1,0 +1,11 @@
+def divisibleSumPairs(n, k, ar):
+    '''Find the number of order pairs (i, j) from an array ar such that
+    i < j and ar[i] + ar[j] is evenly divisible by k.'''
+    
+    indices = [(i, j) for i in range(0, n - 1) for j in range(1, n) if i < j]
+    solutions = 0
+    for index in indices:
+        if (ar[index[0]] + ar[index[1]]) % k == 0:
+            solutions += 1
+    
+    return solutions
