@@ -1,0 +1,27 @@
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    '''Apple tree at a, orange tree at b, house at s through t.
+    apples and oranges are list of distances that a fruit fell from its respective tree.
+    Count the number of apples and oranges that fall on the house, within the range s to t.
+    apples and oranges have length m, n, respectively.'''
+    
+    apple_count = 0
+    orange_count = 0
+    i = 0
+    j = 0
+
+    while i < m:
+        if (apples[i] + a) in range(s, t + 1):
+            apple_count += 1
+        else:
+            None
+        i += 1
+
+    while j < n:
+        if (oranges[j] + b) in range(s, t + 1):
+            orange_count += 1
+        else:
+            None
+        j += 1
+
+    print(apple_count)
+    print(orange_count)
