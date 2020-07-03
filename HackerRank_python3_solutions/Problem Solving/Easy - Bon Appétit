@@ -1,0 +1,10 @@
+def bonAppetit(bill, k, b):
+    '''List of prices b, k is the index of the item Anna won't eat or pay for.
+    Make sure b, the amount Bob charges Anna, isn't more than her fair share.'''
+    
+    correct_amount = (sum(bill) - bill[k]) / 2
+
+    if b <= correct_amount:
+        print('Bon Appetit')
+    else:
+        print(int(b - correct_amount))
