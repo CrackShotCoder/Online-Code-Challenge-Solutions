@@ -1,0 +1,24 @@
+def timeConversion(s):
+    '''Convert a 12 hour time s into a 24 hour time.'''
+    
+    if "AM" in s:
+        solution = s.replace("AM", '')
+        if solution[0] == '1' and solution[1] == '2':
+            solution = solution.replace('1', '0', 1)
+            solution = solution.replace('2', '0', 1)
+        
+    elif "PM" in s:
+        solution = s.replace("PM", '')
+        if solution[0] == '1' and solution[1] == '2':
+            solution = solution
+        else:
+            if solution[0] == '0' and int(solution[1]) in range(0, 8):
+                solution = solution.replace(solution[0], '1', 1)
+                holder = (int(solution[1]) + 2) % 10
+                solution = solution.replace(solution[1], str(holder))
+            else:
+                solution = solution.replace(solution[0], '2', 1)
+                holder = (int(solution[1]) + 2) % 10
+                solution = solution.replace(solution[1], str(holder))
+    
+    return solution
