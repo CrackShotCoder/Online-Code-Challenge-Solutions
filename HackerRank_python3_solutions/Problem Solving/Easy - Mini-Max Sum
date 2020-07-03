@@ -1,0 +1,10 @@
+def miniMaxSum(arr):
+    '''Given a 5 elent array arr, find the min and max 
+    sum of any 4 elements.'''
+
+    arr.sort()
+    min_sum = sum(arr[:-1])
+    arr.reverse()
+    max_sum = sum(arr[:-1])
+    print(min_sum, end = ' ')
+    print(max_sum)
