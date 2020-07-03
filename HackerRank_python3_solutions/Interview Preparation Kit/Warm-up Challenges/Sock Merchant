@@ -1,0 +1,11 @@
+def sockMerchant(n, ar):
+	'''Return the number of pairs of n socks in
+	an array, ar.'''
+
+    matching_pairs = 0
+    number_of_socks = n
+    socks = set(ar)
+    for sock in socks:
+        color_count = ar.count(sock)
+        matching_pairs += math.floor(color_count/2)
+    return matching_pairs
