@@ -1,0 +1,20 @@
+def compareTriplets(a, b):
+    '''a and b are triplets. The respective person gets a point if
+    their entry in the triplet is greater than the same entry in
+    the other triplet.'''
+    
+    i = 0
+    alice = 0
+    bob = 0
+    while i < 3:
+        if a[i] > b[i]:
+            alice += 1
+            i += 1
+        elif b[i] > a[i]:
+            bob += 1
+            i += 1
+        else:
+            i += 1
+            continue
+    
+    return [alice, bob]
