@@ -1,0 +1,5 @@
+def simpleArraySum(ar):
+    ''' Sum the numbers in an array, ar.'''
+    
+    answer = sum(ar)
+    return answer
