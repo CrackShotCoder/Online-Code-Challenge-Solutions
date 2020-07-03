@@ -1,0 +1,9 @@
+def repeatedString(s, n):
+    '''Count the number of times the letter "a" appears if
+    you took the string s and repeated it until you had n characters.'''
+    
+    a_count = s.count('a') * math.floor(n/len(s))
+    extra_characters = n % len(s)
+    a_count += s[:extra_characters].count('a')
+
+    return a_count
