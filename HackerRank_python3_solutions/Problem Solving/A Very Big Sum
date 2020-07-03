@@ -1,0 +1,5 @@
+def aVeryBigSum(ar):
+    '''Sum the elements in the array, ar.'''
+    
+    answer = sum(ar)
+    return answer
