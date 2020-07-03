@@ -1,0 +1,11 @@
+def rotLeft(a, d):
+    '''Slide everything in a one unit left, d times
+    (the first item becomes the last each time).'''
+    
+    k = 1
+    while k <= d:
+        moved = a.pop(0)
+        a.append(moved)
+        k += 1
+
+    return a
