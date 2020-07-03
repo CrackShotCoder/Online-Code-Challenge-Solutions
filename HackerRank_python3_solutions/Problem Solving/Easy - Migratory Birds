@@ -1,0 +1,10 @@
+def migratoryBirds(arr):
+    '''From an array arr containing multiple copies of the numbers 1 through 5, 
+    return the lowest type number of the most frequently sighted bird.'''
+    
+    frequency = []
+    i = 1
+    for i in range(1,6):
+        frequency.append(arr.count(i))
+    
+    return frequency.index(max(frequency)) + 1
