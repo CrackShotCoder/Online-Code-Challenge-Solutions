@@ -1,0 +1,15 @@
+def gradingStudents(grades):
+    ''' Round a list of grades to the next multiple of 5, if the grade
+    is greater than 38.'''
+    
+    rounded_grades = []
+    for grade in grades:
+        spec = grade % 5
+        if grade < 38:
+            rounded_grades.append(grade)
+        elif grade >= 38 and spec < 3:
+            rounded_grades.append(grade)
+        elif grade >= 38 and spec >= 3:
+            rounded_grades.append(grade + 5 - spec)
+            
+    return rounded_grades
