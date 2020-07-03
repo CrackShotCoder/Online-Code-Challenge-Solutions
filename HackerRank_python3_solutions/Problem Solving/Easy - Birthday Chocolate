@@ -1,0 +1,15 @@
+def birthday(s, d, m):
+    '''From a list of numbers s, count the number of times
+    m consecutive numbers sum to d.'''
+    
+    i = 0
+    ways = 0
+    while i + m < len(s) + 0.5:
+        if sum(s[i:i + m]) == d:
+            ways += 1
+            i += 1
+        else:
+            i += 1
+            continue
+    
+    return ways
