@@ -1,0 +1,20 @@
+def breakingRecords(scores):
+    '''For a list of scores, count the number of times a new low score
+    and a new high score were recorded.'''
+    
+    min_score = scores[0]
+    max_score = scores[0]
+    min_count = 0
+    max_count = 0
+
+    for score in scores[1:]:
+        if score < min_score:
+            min_score = score
+            min_count += 1
+        elif score > max_score:
+            max_score = score
+            max_count += 1
+        else:
+            continue
+
+    return max_count, min_count
