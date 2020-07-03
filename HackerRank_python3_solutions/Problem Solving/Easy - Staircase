@@ -1,0 +1,9 @@
+def staircase(n):
+'''Print out a staircase of hashtags with n steps.'''
+
+    solution = ''
+    t = 1
+    while t <= n:
+        solution += ' '*(n-t) + '#'*t + '\n'
+        t += 1
+    print(solution)
