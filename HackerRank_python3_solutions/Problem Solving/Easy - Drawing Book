@@ -1,0 +1,14 @@
+def pageCount(n, p):
+    '''You have a book with n pages, and you want to turn to page p. Page 1 is always on the right.
+    Is it less page flips to turn to page p starting from page 1 or starting from page n?
+    return the smallest amount of page flips to get to page p.'''
+    
+    front_count = math.floor(p/2)
+    back_count = math.floor((n-p)/2)
+
+    if (n % 2 == 1 and p == n - 1) or p == n or p == 1:
+        return 0
+    elif n % 2 == 0 and (p == n - 1 or p == n - 2):
+        return 1
+    else:
+        return min(front_count, back_count)
