@@ -1,0 +1,18 @@
+def countingValleys(n, s):
+	'''Counts the number of valleys a hiker traverses. 
+	n is the lenght of the string s, composed of "D"s and "U"s.'''
+	
+    altitude = 0
+    vally_count = 0
+    steps = n
+    for step in s:
+
+        if step == 'D':
+            altitude -= 1
+        elif step == 'U':
+            altitude += 1
+        
+        if step == 'U' and altitude == 0:
+            vally_count += 1
+
+    return vally_count
