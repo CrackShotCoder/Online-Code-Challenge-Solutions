@@ -1,0 +1,18 @@
+def plusMinus(arr):
+    '''Calculate the percentage of a list arr that is 
+    positive, negative, and zero.'''
+    
+    minus_count = 0
+    zero_count = 0
+    plus_count = 0
+    for number in arr:
+        if number < 0:
+            minus_count += 1
+        elif number == 0:
+            zero_count += 1
+        elif number > 0:
+            plus_count += 1
+    
+    print(round(float(plus_count/len(arr)), 6))
+    print(minus_count/len(arr))
+    print(zero_count/len(arr))
