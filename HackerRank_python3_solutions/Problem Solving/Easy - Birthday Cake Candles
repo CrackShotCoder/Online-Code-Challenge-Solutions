@@ -1,0 +1,7 @@
+def birthdayCakeCandles(ar):
+    '''Count the number of candles of max height in 
+    the array of numbers ar.'''
+    
+    ar.sort()
+    solution = ar.count(ar[-1])
+    return solution
