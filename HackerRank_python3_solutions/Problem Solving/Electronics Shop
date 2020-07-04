@@ -1,0 +1,16 @@
+def getMoneySpent(keyboards, drives, b):
+    '''Find the max sum of one price from keyboards and one price from drives
+    that is less than or equal to the budget, b. 
+    If no such pairing exists, return -1.'''
+    
+    pairs = [(k, d) for k in keyboards for d in drives if k + d <= b]
+    if pairs:
+        prices = []
+
+        for pair in pairs:
+            price = pair[0] + pair[1]
+            prices.append(price)
+        
+        return max(prices)
+    else:
+        return -1
