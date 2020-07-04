@@ -1,0 +1,10 @@
+def catAndMouse(x, y, z):
+  '''Determine if Cat A (position x) or Cat B (position y) is closer 
+  to Mouse C (position z), or if the mouse is perfectly in between the cats.'''
+  
+    if abs(x-z) < abs(y-z):
+        return "Cat A"
+    elif abs(y-z) < abs(x-z):
+        return "Cat B"
+    else:
+        return "Mouse C"
