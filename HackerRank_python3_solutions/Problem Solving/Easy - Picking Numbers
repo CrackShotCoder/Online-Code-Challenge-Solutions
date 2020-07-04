@@ -1,0 +1,12 @@
+def pickingNumbers(a):
+    '''Find the length of the largest subset of a such that the aboslute 
+    difference between any numbers in the subset is less than or equal to 1.'''
+    
+    lengths = []
+    for number in a:
+        possible_solution1 = [value for value in a if value in range(number, number + 2)]
+        possible_solution2 = [value for value in a if value in range(number - 1, number + 1)]
+        lengths.append(len(possible_solution1))
+        lengths.append(len(possible_solution2))
+
+    return max(lengths)
