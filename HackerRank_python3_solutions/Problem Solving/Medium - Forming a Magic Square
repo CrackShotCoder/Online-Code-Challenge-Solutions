@@ -1,0 +1,52 @@
+def formingMagicSquare(s):
+    '''Give the smallest possible "cost," or value change, needed to change the 
+    3 x 3 array s into a magic square. Goal here would be to eventually write something
+    to generate the possible solutions, rather than creating them manually.'''
+
+    magic_square0 = [[8, 1, 6],
+                     [3, 5, 7],
+                     [4, 9, 2]]
+
+    magic_square1 = [[6, 1, 8],
+                     [7, 5, 3],
+                     [2, 9, 4]]
+
+    magic_square2 = [[4, 9, 2],
+                     [3, 5, 7],
+                     [8, 1, 6]]
+
+    magic_square3 = [[2, 9, 4],
+                     [7, 5, 3],
+                     [6, 1, 8]]
+
+    magic_square4 = [[8, 3, 4],
+                     [1, 5, 9],
+                     [6, 7, 2]]
+
+    magic_square5 = [[4, 3, 8],
+                     [9, 5, 1],
+                     [2, 7, 6]]
+
+    magic_square6 = [[6, 7, 2],
+                     [1, 5, 9],
+                     [8, 3, 4]]
+
+    magic_square7 = [[2, 7, 6],
+                     [9, 5, 1],
+                     [4, 3, 8]]
+
+    magic_squares = [magic_square0, magic_square1, 
+                     magic_square2, magic_square3,
+                     magic_square4, magic_square5,
+                     magic_square6, magic_square7]
+
+    costs =[]
+
+    for magic_square in magic_squares:
+        cost = 0
+        for i in range(3):
+            for j in range(3):
+                cost += abs(magic_square[i][j] - s[i][j])
+        costs.append(cost)
+
+    return min(costs)
