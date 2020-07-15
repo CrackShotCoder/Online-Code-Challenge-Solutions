@@ -1,0 +1,8 @@
+def hurdleRace(k, height):
+    '''Returns the difference between the maximum value in the list "height"
+    and the number k, or returns 0 if k >= to that maximum value.'''
+    potions = max(height) - k
+    if potions  > 0:
+        return potions
+    else:
+        return 0
