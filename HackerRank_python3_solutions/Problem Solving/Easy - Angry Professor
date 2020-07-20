@@ -1,0 +1,14 @@
+def angryProfessor(k, a):
+    """Students arrival times are the array a, threshold of students to have class is k.        Determine if class is canceled or not."""
+    students = []
+
+    for time in a:
+        if time <= 0:
+            students.append(a)
+    
+    if len(students) >= k:
+        class_canceled = 'NO'
+    else:
+        class_canceled = 'YES'
+
+    return class_canceled
