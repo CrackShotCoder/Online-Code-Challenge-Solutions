@@ -1,0 +1,13 @@
+def viralAdvertising(n):
+    """Half of the recipients, starting with 5, each share it with three of their friends."""
+    i = 1
+    shared = 5
+    liked = 0
+
+    while i <= n:
+        new_liked = math.floor(shared/2)
+        liked += new_liked
+        shared = new_liked * 3
+        i += 1
+
+    return liked
