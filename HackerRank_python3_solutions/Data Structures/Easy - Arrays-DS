@@ -1,0 +1,7 @@
+def reverseArray(a):
+    """Print out the array in reverse order"""
+    return a[::-1]
+    
+# The problem requests some output '4 3 2 1' for an array [1, 2, 3, 4]. This function doesn't do that; instead, it returns [4, 3, 2, 1], at least in PyCharm. But it passed anyway.
+# I initially wrote a function that does actually output just the elements in reverse order separated by a space, but it wouldn't accept that one.
+# On the actual HackerRank site, I think something's wrong with this problem. 
