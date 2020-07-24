@@ -1,0 +1,16 @@
+# Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip),
+# and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost.
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(meal_cost, tip_percent, tax_percent):
+    """Finds the total cost of a meatl, including tip and tax."""
+    tip = .01 * tip_percent * meal_cost
+    tax = .01 * tax_percent * meal_cost
+    total_cost = tip + tax + meal_cost
+    print(round(total_cost))
