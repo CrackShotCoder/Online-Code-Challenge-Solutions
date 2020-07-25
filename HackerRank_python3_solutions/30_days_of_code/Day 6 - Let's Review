@@ -1,0 +1,27 @@
+# Given a string, S, of length N that is indexed from 0 to N - 1, print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
+# Note: 0 is considered an even index.
+
+number_of_test_cases = int(input())
+
+i = 0
+while i in range(number_of_test_cases):
+    string = input()
+    length_of_string = len(string)
+    
+    solution = ''
+    
+    j = 0
+    while j < length_of_string:
+        solution += string[j]
+        j += 2
+    
+    solution += ' '
+    
+    k = 1
+    while k < length_of_string:
+        solution += string[k]
+        k += 2
+
+    i += 1
+
+    print(solution)
