@@ -1,0 +1,7 @@
+# You are given a string. Split the string on a " " (space) delimiter and join using a - hyphen.
+
+
+def split_and_join(line):
+    my_list = line.split(' ')
+    my_string = '-'.join(my_list)
+    return my_string
