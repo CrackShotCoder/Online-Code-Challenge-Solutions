@@ -1,0 +1,34 @@
+# You are given a string S.
+# Your task is to find out if the string S contains: alphanumeric characters, alphabetical characters, digits, lowercase and uppercase characters.
+
+
+if __name__ == '__main__':
+    s = input()
+    alphanumeric = 'False'
+    alphabet = 'False'
+    digit = 'False'
+    lowercase = 'False'
+    uppercase = 'False'
+    true_list = ['True', 'True', 'True', 'True', 'True']
+
+    for character in s:
+        if character.isupper():
+            uppercase = 'True'
+            alphabet = 'True'
+            alphanumeric = 'True'
+        elif character.islower():
+            lowercase = 'True'
+            alphabet = 'True'
+            alphanumeric = 'True'
+        elif character.isdigit():
+            digit = 'True'
+            alphanumeric = 'True'
+
+        my_list = [alphanumeric, alphabet, digit, lowercase, uppercase]
+
+        if my_list == true_list:
+            break
+    
+    for element in my_list:
+        print(element)
+        
